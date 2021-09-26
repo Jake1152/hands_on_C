@@ -50,7 +50,7 @@ int main()
 	int x, y, z;
 	x = 3, y = 4;
 	// z = x+(++y) * 5; // (x+y)++ or x+(y++)
-    z = (x+y)++ * 5; // (x+y)++ or x+(y++)
+	z = (x+y)++ * 5; // (x+y)++ or x+(y++)
 	printf("%d %d %d", x, y, z);
 
 	/* ++ and  -- affect modifiable */
