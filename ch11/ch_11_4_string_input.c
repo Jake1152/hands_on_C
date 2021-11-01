@@ -35,16 +35,42 @@ int main()
 
     /* fgets() and fputs() */
 
-    char words[STRLEN];
-    fgets(words, STRLEN, stdin);    // does NOT remove \n
+    // char words[STRLEN];
+    // fgets(words, STRLEN, stdin);    // does NOT remove \n
+    // // fgets(words, STRLEN, 파일 pointer);    // does NOT remove \n
+    // // file gets, file 자리에 stdin을 사용하여 쓸수도 있다.
 
-    // TODO: '\n' with '\0'
+    // // gets보다 fgets가 더 안정적으로 쓸 수 있다. 
 
-    fputs(words, stdout);
-    fputs("END", stdout);
+    // // TODO: '\n' with '\0'
+    // int i = 0;
+    // while (words[i] != '\n' && words[i] != '\0')
+    //     i++;
+    // if (words[i] == '\n')
+    //     words[i] = '\0';
 
-    /* SMall array */
+    // fputs(words, stdout);
+    // fputs("END", stdout);
 
+    /* Small array */
+    char small_array[5];
+    puts("Enter long strings:");
+    fgets(small_array, 5, stdin); // EOF를 받으면 '\0'을 retunn
+    printf("%p\n", small_array);
+    printf("%p\n", fgets(small_array, 5, stdin));   // Return value of fgets
+    fputs(small_array, stdout);
+
+    // scanf()
+
+    char str1[6], str2[6];
+    int count = scanf("%5s %5s", str1, str2);
+    int count = scanf("%6s %6s", str1, str2);
+    int count = scanf_s("%5s %5s", str1, 6, str2, 6);
+    printf("%s|%s \n", str1, str2);
+
+    /* An example of custom input function */
+    // char word[11];
+    // puts(custom_string_input(word, 11));
 
     return (0);
 }
