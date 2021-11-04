@@ -9,7 +9,7 @@ int main()
         "Counting apples",
         "Wathcing movies with friends",
         "Writing sad letters",
-        "Studying the C language",
+        "Studying the C language"
     };
 
     const char *yourthings[5][40] = {
@@ -17,7 +17,7 @@ int main()
         "Dancing is the rain",
         "Counting apples",
         "Wathcing movies with friends",
-        "Writing sad letters",
+        "Writing sad letters"
     };
 
     const char *temp1 = "Dancing in the rain";
@@ -28,9 +28,10 @@ int main()
     // printf("%s %u %u\n", &yourthings[0][0], (unsigned)temp2);
     printf("\n");
 
-    printf("%-30s %-30s\n", "My Things:", "Your Things:");
+    printf("%-10s %-10s\n", "My Things:", "Your Things:");
     for ( int i = 0; i < 5; i++)
-        printf("%-30s %-30s\n", mythings[i], yourthings[i]);
+        printf("%-10s %-10s\n", mythings[i], yourthings[i]);
+    // -30s의 역할
     
     printf("\nsizeof mything: %zd, sizeof your yourthing: %zd\n",
         sizeof(mythings), sizeof(yourthings));
