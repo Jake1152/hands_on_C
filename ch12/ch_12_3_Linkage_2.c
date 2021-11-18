@@ -7,6 +7,8 @@ void testLinkages(int hello, double world)
 {
 	printf("DoSomething called\n");
 	printf("%d\n", el);
-	// printf();
+	// printf("%d\n", il);
+	// printf("%d", dodgers);
 
+	el++;
 }

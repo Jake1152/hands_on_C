@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-#define "ch_12_3_Linkage_2.c"
+#include "ch_12_3_Linkage_2.c"
 /*
 	Linagke
 
